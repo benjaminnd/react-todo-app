@@ -24,7 +24,7 @@ function Todo({todos, completeTodo, deleteTodo, updateTodo}) {
     }
 
     return(
-        <div className="space-y-3 flex flex-wrap justify-around bg-green-100 px-4 py-2 m-2">
+        <div className="space-y-3 space-x-3 flex flex-wrap justify-center bg-green-100 px-4 py-2 m-2">
             {todos.map((todo, index) =>
                 (editTodo.id === todo.id) ? 
                 (<TodoForm classes={updateFormClass} key={index} edit={editTodo} updateTodo={updateTodo} handleUpdate={handleUpdate}/>) :
