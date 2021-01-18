@@ -12,7 +12,7 @@ function Todo({todos, completeTodo, deleteTodo, updateTodo}) {
         completed: null
     })
 
-    const updateFormClass='flex-1';
+
 
     const handleUpdate = () => {
         setEditTodo({
@@ -27,7 +27,7 @@ function Todo({todos, completeTodo, deleteTodo, updateTodo}) {
         <div className="space-y-3 space-x-3 flex flex-wrap justify-center bg-green-100 px-4 py-2 m-2">
             {todos.map((todo, index) =>
                 (editTodo.id === todo.id) ? 
-                (<TodoForm classes={updateFormClass} key={index} edit={editTodo} updateTodo={updateTodo} handleUpdate={handleUpdate}/>) :
+                (<TodoForm key={index} edit={editTodo} updateTodo={updateTodo} handleUpdate={handleUpdate}/>) :
                 (<div key={index} className={`border-2 border-dashed cursor-pointer flex items-center p-1 rounded ${todo.completed ? 'line-through text-gray-500 italic border-gray-300': 'border-green-300'}`}>
                     <div className="mr-2" onClick={() => completeTodo(todo.id)}>{todo.value}</div>
                     <RiCloseCircleLine className="" onClick={() =>deleteTodo(todo.id)}/>

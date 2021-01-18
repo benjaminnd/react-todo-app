@@ -2,8 +2,8 @@ import React, {useState, useEffect, useRef} from 'react'
 import {GrAdd, GrUpdate} from 'react-icons/gr'
 
 
-function TodoForm({classes, edit,addTodo, updateTodo, handleUpdate}) {
-    const[input, setInput] = useState('');
+function TodoForm({edit,addTodo, updateTodo, handleUpdate}) {
+    const[input, setInput] = useState(edit? edit.value : '');
     const inputRef = useRef(null)
 
     useEffect(()=>{
