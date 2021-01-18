@@ -12,7 +12,10 @@ function Todo({todos, completeTodo, deleteTodo, updateTodo}) {
         completed: null
     })
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> db8a26156e1e78d71989163987be7b567756b05a
 
     const handleUpdate = () => {
         setEditTodo({

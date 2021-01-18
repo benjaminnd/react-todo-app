@@ -4,7 +4,6 @@ import TodoForm from './TodoForm';
 
 function TodoList() {
     const [todos, setTodos] = useState([]);
-    let list = []
     const addTodo = todo => {
         if (todo.value === '' || /^\s*$/.test(todo)) {
             return
